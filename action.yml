@@ -1,0 +1,24 @@
+# SPDX-FileCopyrightText: 2020 Free Software Foundation Europe e.V. <https://fsfe.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+name: 'REUSE Compliance Check'
+description: "Check your project's REUSE compliance for clear and simple licensing and copyright!"
+author: 'Free Software Foundation Europe (FSFE)'
+inputs:
+  arg:
+    description: 'Optional argument'
+    required: false
+  cmd:
+    description: 'Subcommand'
+    required: true
+    default: 'lint'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.arg }}
+    - ${{ inputs.cmd }}
+branding:
+  icon: 'check-circle'
+  color: 'green'

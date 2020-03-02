@@ -1,0 +1,10 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: REUSE Github Action
+Upstream-Contact: Free Software Foundation Europe e.V. <https://fsfe.org/contact>
+Source: https://github.com/fsfe/reuse-action
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
