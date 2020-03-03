@@ -8,23 +8,23 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 [![REUSE status](https://api.reuse.software/badge/github.com/fsfe/reuse-action)](https://api.reuse.software/info/github.com/fsfe/reuse-action)
 
-You struggle with how to properly do licensing and copyright in your project? REUSE helps you in three simple steps! Read more on [reuse.software](https://reuse.software) and run the short tutorial to learn how to make your licensing and copyright easy and clear.
+Do you struggle with copyright and licensing in your project? REUSE helps you in three simple steps! Read more on [reuse.software](https://reuse.software) and run the short tutorial to learn how to make your copyright and licensing easy and clear.
 
-This action allows users to check for compliance with the REUSE best practices if they prefer GitHub actions. It is one of many options for projects to include REUSE in their workflows. Please see the [help for developers](https://reuse.software/dev/) to get an overview.
+This action allows users to check for compliance with the REUSE best practices. It is one of many options for projects to include REUSE in their workflows. Please see the [help for developers](https://reuse.software/dev/) to get an overview.
 
 ## Features
 
 This action runs the `reuse lint` command over your repository to check the following information:
 
 * Is copyright and licensing information available for every single file?
-* Do full license texts exist for all found license identifiers?
+* Do license texts exist for all found license identifiers?
 * Are there any other problems with detecting copyright and licensing information?
 
-To make use of the other features the REUSE helper tool offers, for example adding comment headers semi-automatically and downloading license texts, please [install the tool on your computer](https://github.com/fsfe/reuse-tool).
+This action uses the [REUSE helper tool](https://github.com/fsfe/reuse-tool). For more features, please install the tool locally.
 
 ## Example usage
 
-By default, you can include the following lines in your workflow .yml file to run the lint subcommand:
+You can include the following lines in your workflow .yml file to run the lint subcommand:
 
 ```yml
 name: REUSE Compliance Check
@@ -59,6 +59,6 @@ Please note that due to Github restrictions it is not possible to pass extra arg
 
 ## License
 
-This action itself is REUSE compliant, so copyright and licensing information is stored in every file or as close as possible to it. At the time of writing, all files are licensed under GPL-3.0-or-later, copyright Free Software Foundation Europe e.V..
+This action itself is REUSE compliant, so copyright and licensing information is stored in every file. As of March 2020, all files are licensed under GPL-3.0-or-later.
 
 Using the [REUSE helper tool](https://github.com/fsfe/reuse-tool), you can run `reuse spdx` to get a full bill of materials.
