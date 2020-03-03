@@ -24,7 +24,7 @@ This action uses the [REUSE helper tool](https://github.com/fsfe/reuse-tool). Fo
 
 ## Example usage
 
-By default, you can include the following lines in your workflow .yml file to run the lint subcommand:
+You can include the following lines in your workflow .yml file to run the lint subcommand:
 
 ```yml
 name: REUSE Compliance Check
