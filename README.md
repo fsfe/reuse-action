@@ -10,7 +10,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 Do you struggle with copyright and licensing in your project? REUSE helps you in three simple steps! Read more on [reuse.software](https://reuse.software) and run the short tutorial to learn how to make your copyright and licensing easy and clear.
 
-This action allows users to check for compliance with the REUSE best practices if they prefer GitHub actions. It is one of many options for projects to include REUSE in their workflows. Please see the [help for developers](https://reuse.software/dev/) to get an overview.
+This action allows users to check for compliance with the REUSE best practices. It is one of many options for projects to include REUSE in their workflows. Please see the [help for developers](https://reuse.software/dev/) to get an overview.
 
 ## Features
 
