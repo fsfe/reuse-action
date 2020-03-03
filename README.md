@@ -59,6 +59,6 @@ Please note that due to Github restrictions it is not possible to pass extra arg
 
 ## License
 
-This action itself is REUSE compliant, so copyright and licensing information is stored in every file or as close as possible to it. At the time of writing, all files are licensed under GPL-3.0-or-later, copyright Free Software Foundation Europe e.V..
+This action itself is REUSE compliant, so copyright and licensing information is stored in every file. As of March 2020, all files are licensed under GPL-3.0-or-later.
 
 Using the [REUSE helper tool](https://github.com/fsfe/reuse-tool), you can run `reuse spdx` to get a full bill of materials.
