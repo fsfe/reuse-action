@@ -20,7 +20,7 @@ This action runs the `reuse lint` command over your repository to check the foll
 * Do license texts exist for all found license identifiers?
 * Are there any other problems with detecting copyright and licensing information?
 
-To make use of the other features the REUSE helper tool offers, for example adding comment headers semi-automatically and downloading license texts, please [install the tool on your computer](https://github.com/fsfe/reuse-tool).
+This action uses the [REUSE helper tool](https://github.com/fsfe/reuse-tool). For more features, please install the tool locally.
 
 ## Example usage
 
