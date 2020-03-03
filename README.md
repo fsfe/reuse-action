@@ -17,7 +17,7 @@ This action allows users to check for compliance with the REUSE best practices. 
 This action runs the `reuse lint` command over your repository to check the following information:
 
 * Is copyright and licensing information available for every single file?
-* Do full license texts exist for all found license identifiers?
+* Do license texts exist for all found license identifiers?
 * Are there any other problems with detecting copyright and licensing information?
 
 To make use of the other features the REUSE helper tool offers, for example adding comment headers semi-automatically and downloading license texts, please [install the tool on your computer](https://github.com/fsfe/reuse-tool).
