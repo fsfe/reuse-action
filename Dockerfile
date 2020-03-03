@@ -8,4 +8,4 @@ FROM fsfe/reuse:latest
 WORKDIR /github/workspace
 
 # Run reuse lint
-ENTRYPOINT ["reuse"]
+ENTRYPOINT "reuse"
