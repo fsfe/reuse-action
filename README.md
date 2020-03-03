@@ -40,24 +40,22 @@ jobs:
       uses: fsfe/reuse-action@master
 ```
 
-If you would like to provide extra arguments to the linter, or even run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials including files in potential Git submodules:
+If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
 
 ```yml
     - name: REUSE Compliance Check
       uses: fsfe/reuse-action@master
       with:
         cmd: 'spdx'
-        arg: '--include-submodules'
 ```
 
-Please note that Github actions currently do not support an array of input arguments, so you can define only one value for `arg`.
+Please note that due to Github restrictions it is not possible to pass extra arguments like `--include-submodules` to the `cmd` input.
 
 ## Inputs Description
 
 | Name  | Requirement | Default | Description |
 | ----- | ----------- | ------- | ----------- |
 | `cmd` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
-| `arg` | _optional_  |         | Optional arguments for the REUSE helper tool. This action can only handle one argument at the moment due to design limitations. |
 
 ## License
 
