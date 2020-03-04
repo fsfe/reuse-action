@@ -9,3 +9,4 @@ WORKDIR /github/workspace
 
 # Run reuse lint
 ENTRYPOINT ["reuse"]
+CMD ["lint"]
