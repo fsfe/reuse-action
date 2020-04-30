@@ -46,16 +46,14 @@ If you would like to run other subcommands, you could use the following snippet 
     - name: REUSE Compliance Check
       uses: fsfe/reuse-action@master
       with:
-        cmd: 'spdx'
+        args: spdx
 ```
-
-Please note that due to Github restrictions it is not possible to pass extra arguments like `--include-submodules` to the `cmd` input.
 
 ## Inputs Description
 
-| Name  | Requirement | Default | Description |
-| ----- | ----------- | ------- | ----------- |
-| `cmd` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
+| Name   | Requirement | Default | Description |
+| ------ | ----------- | ------- | ----------- |
+| `args` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
 
 ## License
 

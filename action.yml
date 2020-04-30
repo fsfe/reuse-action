@@ -5,16 +5,9 @@
 name: 'REUSE Compliance Check'
 description: "Check your project's REUSE compliance for clear and simple licensing and copyright!"
 author: 'Free Software Foundation Europe (FSFE)'
-inputs:
-  cmd:
-    description: 'Subcommand'
-    required: true
-    default: 'lint'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.cmd }}
 branding:
   icon: 'check-circle'
   color: 'green'
