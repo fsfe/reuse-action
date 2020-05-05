@@ -35,25 +35,38 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps: 
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@master
+      uses: fsfe/reuse-action@v1
 ```
 
 If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
 
 ```yml
+    - uses: actions/checkout@v2
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@master
+      uses: fsfe/reuse-action@v1
       with:
         args: spdx
 ```
+
+In the same fashion, it is possible to add optional arguments like `--include-submodules`:
+
+```yml
+    - uses: actions/checkout@v2
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@v1
+      with:
+        args: --include-submodules lint
+```
+
 
 ## Inputs Description
 
 | Name   | Requirement | Default | Description |
 | ------ | ----------- | ------- | ----------- |
 | `args` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
+
 
 ## License
 
