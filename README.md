@@ -37,7 +37,7 @@ jobs:
     steps: 
     - uses: actions/checkout@v2
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v1
+      uses: fsfe/reuse-action@v1.1
 ```
 
 If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
@@ -45,7 +45,7 @@ If you would like to run other subcommands, you could use the following snippet 
 ```yml
     - uses: actions/checkout@v2
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v1
+      uses: fsfe/reuse-action@v1.1
       with:
         args: spdx
 ```
@@ -55,7 +55,7 @@ In the same fashion, it is possible to add optional arguments like `--include-su
 ```yml
     - uses: actions/checkout@v2
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v1
+      uses: fsfe/reuse-action@v1.1
       with:
         args: --include-submodules lint
 ```
