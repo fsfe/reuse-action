@@ -27,6 +27,10 @@ This action uses the [REUSE helper tool](https://github.com/fsfe/reuse-tool). Fo
 You can include the following lines in your workflow .yml file to run the lint subcommand:
 
 ```yml
+# SPDX-FileCopyrightText: 2020 Free Software Foundation Europe e.V. <https://fsfe.org>
+#
+# SPDX-License-Identifier: CC0-1.0
+
 name: REUSE Compliance Check
 
 on: [push, pull_request]
