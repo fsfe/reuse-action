@@ -4,9 +4,9 @@
 
 FROM fsfe/reuse:latest
 
-# Go to automatically mounted workspace
-WORKDIR /github/workspace
+# Copy reuse wrapper used as entrypoint
+COPY reuse-action-wrapper.sh /bin/reuse-action-wrapper
 
 # Run reuse lint
-ENTRYPOINT ["reuse"]
+ENTRYPOINT ["/bin/reuse-action-wrapper"]
 CMD ["lint"]
