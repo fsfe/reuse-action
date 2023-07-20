@@ -4,10 +4,15 @@
 
 name: REUSE Compliance Check
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+      - master
+  pull_request:
 
 jobs:
-  test:
+  # Use local file to test against itself
+  test-self:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -18,8 +23,18 @@ jobs:
     - name: REUSE lint
       uses: ./
       with:
-        args: --include-submodules lint
+        args: --include-submodules lint --json
     - name: REUSE SPDX SBOM
       uses: ./
       with:
         args: spdx
+
+  # Use latest major version of the action
+  test-majorversion:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@v2
+      with:
+        args: lint --json
