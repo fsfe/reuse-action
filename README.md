@@ -71,6 +71,10 @@ In the same fashion, it is possible to add optional arguments like `--include-su
 | ------ | ----------- | ------- | ----------- |
 | `args` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
 
+## Versions
+
+The major version of this action follows the major version of the [REUSE helper tool](https://github.com/fsfe/reuse-tool). Make sure to keep up with the latest major version to benefit from the latest features and be able to spot licensing and copyright issues that we detect with newer versions.
+
 
 ## License
 
