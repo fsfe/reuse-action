@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: GPL-3.0-or-later
 
-FROM fsfe/reuse:1
+FROM fsfe/reuse:2
 
 # Copy reuse wrapper used as entrypoint
 COPY reuse-action-wrapper.sh /bin/reuse-action-wrapper
