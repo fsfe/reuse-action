@@ -11,5 +11,8 @@ git config --global --add safe.directory "$GITHUB_WORKSPACE"
 # Enter directory
 cd "$GITHUB_WORKSPACE" || exit 1
 
+# Add header to step summary
+echo "# Reuse Stats" >>"$GITHUB_STEP_SUMMARY"
+
 # Run REUSE
-reuse "$@"
+reuse "$@" | tee -a "$GITHUB_STEP_SUMMARY"
