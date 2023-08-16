@@ -74,6 +74,7 @@ In the same fashion, it is possible to add optional arguments like `--include-su
 | Name   | Requirement | Default | Description |
 | ------ | ----------- | ------- | ----------- |
 | `args` | _required_  | `lint`  | The subcommand for the REUSE helper tool. Read the [tool's documentation](https://reuse.readthedocs.io/) for all available subcommands. |
+| `summary` | _required_ | `markdown` | Whether or not to include the tool output in the github step summary markdown. Set to `json` to format the tools output in a codeblock or to `none` to disable this output. Regardless of this option the output will still be visible in the logs. |
 
 ## Versions
 
