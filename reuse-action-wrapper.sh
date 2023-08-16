@@ -24,7 +24,7 @@ if [ "$INPUT_SUMMARY" = "json" ]; then
 fi
 
 # Run REUSE
-reuse "$@" | tee -a "$GITHUB_STEP_SUMMARY"
+reuse "$@" | (if ! [ "$INPUT_SUMMARY" = "none" ]; then tee -a "$GITHUB_STEP_SUMMARY"; else cat; fi)
 
 if [ "$INPUT_SUMMARY" = "json" ]; then
     # Add code block footer to step summary
