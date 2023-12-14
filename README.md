@@ -39,7 +39,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: REUSE Compliance Check
       uses: fsfe/reuse-action@v2
 ```
@@ -47,7 +47,7 @@ jobs:
 If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
 
 ```yml
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: REUSE SPDX SBOM
       uses: fsfe/reuse-action@v2
       with:
@@ -57,7 +57,7 @@ If you would like to run other subcommands, you could use the following snippet 
 In the same fashion, it is possible to add optional arguments like `--include-submodules`:
 
 ```yml
-    - uses: actions/checkout@v3
+    - uses: actions/checkout@v4
     - name: REUSE Compliance Check
       uses: fsfe/reuse-action@v2
       with:
