@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: 2024 Free Software Foundation Europe e.V. <https://fsfe.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+version = 1
+SPDX-PackageName = "REUSE GitHub Action"
+SPDX-PackageSupplier = "Free Software Foundation Europe e.V. <https://fsfe.org/contact>"
+SPDX-PackageDownloadLocation = "https://github.com/fsfe/reuse-action"
+
+# Sample paragraph, commented out:
+#
+# [[annotations]]
+# path = "src/*"
+# precedence = "override"
+# SPDX-FileCopyrightText = "$YEAR $NAME <$CONTACT>"
+# SPDX-License-Identifier = "..."
