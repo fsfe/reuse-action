@@ -36,20 +36,23 @@ name: REUSE Compliance Check
 on: [push, pull_request]
 
 jobs:
-  test:
+  reuse-compliance-check:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
+
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v3
+      uses: fsfe/reuse-action@3ae3c6bdf1257ab19397fab11fd3312144692083 # v4.0.0
 ```
 
 If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
 
 ```yml
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
     - name: REUSE SPDX SBOM
-      uses: fsfe/reuse-action@v3
+      uses: fsfe/reuse-action@3ae3c6bdf1257ab19397fab11fd3312144692083 # v4.0.0
       with:
         args: spdx
 ```
@@ -57,9 +60,10 @@ If you would like to run other subcommands, you could use the following snippet 
 In the same fashion, it is possible to add optional arguments like `--include-submodules`:
 
 ```yml
-    - uses: actions/checkout@v4
+    - name: Checkout
+      uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
     - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v3
+      uses: fsfe/reuse-action@3ae3c6bdf1257ab19397fab11fd3312144692083 # v4.0.0
       with:
         args: --include-submodules lint
 ```
