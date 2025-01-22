@@ -10,6 +10,9 @@ on:
       - main
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
   # Use local file to test against itself
   test-self:
