@@ -30,7 +30,7 @@ You can include the following lines in your workflow .yml file to run the lint s
 # SPDX-FileCopyrightText: 2022 Free Software Foundation Europe e.V. <https://fsfe.org>
 #
 # SPDX-License-Identifier: CC0-1.0
-
+---
 name: REUSE Compliance Check
 
 on: [push, pull_request]
@@ -42,33 +42,33 @@ jobs:
   reuse-compliance-check:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v5
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v5
 ```
 
 If you would like to run other subcommands, you could use the following snippet which outputs a the SPDX bill of materials:
 
 ```yml
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: REUSE SPDX SBOM
-      uses: fsfe/reuse-action@v5
-      with:
-        args: spdx
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: REUSE SPDX SBOM
+        uses: fsfe/reuse-action@v5
+        with:
+          args: spdx
 ```
 
 In the same fashion, it is possible to add optional arguments like `--include-submodules`:
 
 ```yml
-    - name: Checkout
-      uses: actions/checkout@v4
-    - name: REUSE Compliance Check
-      uses: fsfe/reuse-action@v5
-      with:
-        args: --include-submodules lint
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: REUSE Compliance Check
+        uses: fsfe/reuse-action@v5
+        with:
+          args: --include-submodules lint
 ```
 
 
