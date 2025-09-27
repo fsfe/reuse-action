@@ -3,11 +3,31 @@
 # SPDX-License-Identifier: GPL-3.0-or-later
 ---
 name: 'REUSE Compliance Check'
+
 description: "Check your project's REUSE compliance for clear and simple licensing and copyright!"
+
 author: 'Free Software Foundation Europe (FSFE)'
-runs:
-  using: 'docker'
-  image: 'Dockerfile'
+
 branding:
   icon: 'check-circle'
   color: 'green'
+
+inputs:
+  spec:
+    description: 'REUSE tool version spec to install via pipx'
+    default: 'reuse == 5.*'
+  path:
+    description: 'Path to the directory to check (default: current directory)'
+    default: '${{ github.workspace }}'
+  args:
+    description: 'Additional arguments to pass to the REUSE tool (default: lint)'
+    default: 'lint'
+
+runs:
+  using: composite
+  steps:
+    - run: pipx run --spec "$SPEC" reuse ${{ inputs.args }}
+      working-directory: ${{ inputs.path }}
+      shell: bash
+      env:
+        SPEC: ${{ inputs.spec }}
