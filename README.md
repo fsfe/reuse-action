@@ -33,7 +33,7 @@ You can include the following lines in your workflow .yml file to run the lint s
 ---
 name: REUSE Compliance Check
 
-on: [push, pull_request]
+on: [push, pull_request, workflow_call]
 
 permissions:
   contents: read
