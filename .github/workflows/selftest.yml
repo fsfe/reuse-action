@@ -73,3 +73,11 @@ jobs:
       uses: fsfe/reuse-action@v5
       with:
         args: lint --json
+  test-v6:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: REUSE Compliance Check
+      uses: fsfe/reuse-action@v6
+      with:
+        args: lint --json
