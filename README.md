@@ -20,7 +20,7 @@ This action runs the `reuse lint` command over your repository to check the foll
 * Do license texts exist for all found license identifiers?
 * Are there any other problems with detecting copyright and licensing information?
 
-This action uses the [REUSE helper tool](https://github.com/fsfe/reuse-tool). For more features, please install the tool locally.
+This action uses the [REUSE helper tool](https://codeberg.org/fsfe/reuse-tool). For more features, please install the tool locally.
 
 ## Example usage
 
@@ -87,4 +87,4 @@ The major version of this action follows the major version of the [REUSE helper 
 
 This action itself is REUSE compliant, so copyright and licensing information is stored in every file. As of March 2020, all files are licensed under GPL-3.0-or-later.
 
-Using the [REUSE helper tool](https://github.com/fsfe/reuse-tool), you can run `reuse spdx` to get a full bill of materials.
+Using the [REUSE helper tool](https://codeberg.org/fsfe/reuse-tool), you can run `reuse spdx` to get a full bill of materials.
