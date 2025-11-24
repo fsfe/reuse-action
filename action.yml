@@ -11,3 +11,10 @@ runs:
 branding:
   icon: 'check-circle'
   color: 'green'
+
+inputs:
+  summary:
+    description: "Show your REUSE compliance report in the github step summary using markdown (`markdown`), a json codeblock (`json`) or not at all (`none`)"
+    required: true
+    default: 'markdown'
+

@@ -27,10 +27,12 @@ jobs:
       uses: ./
       with:
         args: --include-submodules lint --json
+        summary: json
     - name: REUSE SPDX SBOM
       uses: ./
       with:
         args: spdx
+        summary: none
 
   # Use all major version of the action
   test-v1:
